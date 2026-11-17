@@ -5,7 +5,7 @@ versions of macOS. Instead you get:
 
 > **"SenselApp" is damaged and can't be opened. You should move it to the Trash.**
 
-The app isn't actually damaged. Sensel's last installer (`SenselApp0.19.32.pkg`, from
+The app isn't actually damaged. Sensel's last installer ([`SenselApp0.19.32.pkg`](https://web.archive.org/web/20240327074839/http://senselapp.com/download/mac.php), from
 2019) installs an app whose code signature lists six small interface files (`.nib`) that
 aren't in the package. Recent macOS checks every file a signature lists, finds them
 missing, and refuses to open the app.
@@ -15,7 +15,7 @@ missing, and refuses to open the app.
 1. It takes SenselApp out of Sensel's installer package. The installer itself is not run.
 2. It checks that the package is the genuine 0.19.32 installer (by SHA-256) and that the
    app is signed by Sensel, Inc.
-3. It copies the app to the **Applications folder in your home folder**
+3. It copies the app to the **Applications folder in your home user folder**
    (`~/Applications`), so no administrator password is needed.
 4. It re-signs the app on your Mac so macOS will open it.
 
